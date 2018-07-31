@@ -13,7 +13,7 @@ const imgGerada = document.getElementById('imgGerada');
 const lblCountry = document.getElementById('lblCountry');
 const btnGerar = document.getElementById('btnGerar');
 
-let apiUrl = "https://uinames.com/api/?ext&?region=germany";
+let apiUrl = "https://uinames.com/api/?ext";
 
 ipcRenderer.on('update-url', (event) => {
   alert('KKK te enganei a API não deixa eu fazer isso :(');
