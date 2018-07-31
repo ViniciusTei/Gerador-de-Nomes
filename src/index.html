@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../assets/css/styles.css"  />
+    <link rel="stylesheet" href="../assets/css/menu.css"  />
+    <link rel="stylesheet" href="../assets/css/default.css" />
+
+    <title>Name Generator</title>
+  </head>
+  <body>
+    <div id="title-bar">
+         <div id="title">Name Generator</div>
+         <div id="title-bar-btns">
+              <button id="min-btn">-</button>
+              <button id="max-btn">+</button>
+              <button id="close-btn">x</button>
+         </div>
+
+    </div>
+    <div class="headBox">
+      <div>
+        <!-- Menu -->
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">MENU</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#" id="menuConfig">Configurações</a>
+            <a href="#" id="menuHelp" title="API">Help</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1>Gerador de Nomes</h1>
+      </div>
+    </div>
+      <button class="button" id="btnGerar">Gerar</button>
+    <div class="perfilBox">
+      <img id="imgGerada"/>
+      <div class="box">
+        <pre>
+          Nome:    <label   id="lblName"></label>
+          e-Mail:  <label id="lblEmail"></label>
+          Número:  <label id="lblNumber"></label>
+          Nacionalidade: <label id="lblCountry"></label>
+        </pre>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Name-Generator",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^2.0.5"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
