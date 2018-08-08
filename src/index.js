@@ -15,8 +15,26 @@ const btnGerar = document.getElementById('btnGerar');
 
 let apiUrl = "https://uinames.com/api/?ext";
 
-ipcRenderer.on('update-url', (event) => {
-  alert('KKK te enganei a API não deixa eu fazer isso :(');
+ipcRenderer.on('update-url', (event, gender, region) => {
+
+  apiUrl = "https://uinames.com/api/?ext";
+
+  if (gender == 'Escolha uma opção' || gender == 'Randomico') {
+    if (region == 'Escolha uma opção' || region == 'Randomico') {
+      apiUrl = "https://uinames.com/api/?ext";
+    }//end if region rand
+    else { //entra nesse else quando a regiao não é aleatoria
+      apiUrl =  apiUrl.concat('&region=', region);
+    }
+  }//end if gender rand
+  else {
+    if (region == 'Escolha uma opção' || region == 'Randomico') {
+      apiUrl = apiUrl.concat('&gender=', gender);
+    }
+    else{
+      apiUrl = apiUrl.concat('&gender=', gender, '&region=', region);
+    }
+  } //end else gender
 })
 
 var nomeCompleto = '';
@@ -24,6 +42,7 @@ var nomeCompleto = '';
 btnGerar.addEventListener('click', function () {
   const namey = axios.get(apiUrl)
   .then(function (response) {
+    console.log(response);
     console.log(apiUrl);
         imgGerada.src = response.data.photo;
         lblName.innerHTML = nomeCompleto.concat(response.data.name, ' ', response.data.surname);

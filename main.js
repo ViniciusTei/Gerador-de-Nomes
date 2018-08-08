@@ -29,8 +29,8 @@ function createWindow () {
     mainWindow = null;
   })
 
-  ipcMain.on('config-url', (event) => {
-    mainWindow.webContents.send('update-url');
+  ipcMain.on('config-url', (event, arg1, arg2) => {
+    mainWindow.webContents.send('update-url', arg1, arg2);
   })
 
 }
