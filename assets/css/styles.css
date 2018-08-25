@@ -4,70 +4,32 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #111;
   text-align: center;
+  color: white;
 }
 
-.button {
-  margin: 25px;
-  padding: 1rem;
-  text-transform: uppercase;
-  color: #fafafa;
-  background-color: #438c62;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 1px 1px 10px rgba(50,50,50,.4);
-  transition: .3s all ease;
-  letter-spacing: .1rem;
-  font-size: .85rem;
-  position: relative;
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
 }
 
-.button:active{
-  background-color: #3f624e;
+#sidebar {
+    min-width: 80px;
+    max-width: 80px;
 }
 
-h1{
-  color: #FFF;
+#sidebar.active {
+    margin-left: -80px;
 }
 
-.perfilBox{
-  padding: 5px;
-  border: 2px solid #aaf2c8;
-  border-width: thin;
-  margin: 20px;
-  color: #FFF;
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
-.box{
-  font-size: 12px;
-  text-align: left;
-  padding: 5px;
-}
-
-label{
-  color: #FFF;
-}
-
-img {
-  width: auto;
-  height: 80px;
-  border-radius: 45px;
-  padding: 15px;
-  float: left;
-}
-
-.headBox{
-  color: #FFF;
-}
-
-.menu {
-  text-align: left;
-}
-
-.headBox {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-
-.headBox > h1 {
-
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }

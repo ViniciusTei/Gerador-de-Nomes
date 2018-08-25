@@ -11,8 +11,8 @@ function createWindow () {
 /* Main window*/
   mainWindow = new BrowserWindow({
     show: false,
-    height: 400,
-    width: 600,
+    height: 600,
+    width: 800,
     autoHideMenuBar: true,
     frame: false
   });
